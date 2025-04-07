@@ -69,14 +69,14 @@ def generate_contour (roll):
     ax.text(total_grid_cm / 2, 7, f"Contour Map for roll number: {roll} and your min. RL is {Lowest_Rl}",
         fontsize=12, ha='center', va='top', fontweight='bold')
     
+    #Change the save location as per your requirement
     plt.savefig(f'C:\\Users\\ACER\\Desktop\\contour\\For Class\\grid_contour_new_final_fitted_079BCE{roll}.pdf', bbox_inches='tight', pad_inches=0, dpi=300)
 
 
-generate_contour(157)
+#Generating Contour Map for our entire section's classmates (from Roll Number 97 to 144)
+for i in range (97, 145):
+    generate_contour(i)
+    print(f"generated for roll number {i}")
 
-#for i in range (98, 145):
-#    generate_contour(i)
-#    print(f"generated for roll number {i}")
-
-#print("")
-#print("generated for all")
+print("")
+print("generated for all")
